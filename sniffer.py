@@ -16,7 +16,7 @@ def main():
 
     while True:
         try:
-            raw_data, addr = conn.recvfrom(65535)
+            raw_data = conn.recv(65535)
 
             src_addr, dst_addr = get_addresses(raw_data[12:20])
 
